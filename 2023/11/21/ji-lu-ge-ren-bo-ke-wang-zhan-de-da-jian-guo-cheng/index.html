@@ -19,25 +19,12 @@
 <li>在cloudfare上配置一个cname指向xxx.github.io,或者配置4个A type，如图<br><img src="/../static/img/dns.png"></li>
 </ul>
 <h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><ul>
-<li><p>hexo基于node js，要先安装node js, <a target="_blank" rel="noopener" href="http://nodejs.cn/download/%EF%BC%8C%E9%80%89%E6%8B%A9%E9%80%82%E5%90%88%E6%82%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E5%8C%85%E3%80%82">http://nodejs.cn/download/，选择适合您操作系统的安装程序包。</a></p>
-</li>
-<li><p>用来将md生成博客html文件</p>
-</li>
-<li><p>安装hexo</p>
-</li>
+<li>hexo基于node js，要先安装node js, <a target="_blank" rel="noopener" href="http://nodejs.cn/download/%EF%BC%8C%E9%80%89%E6%8B%A9%E9%80%82%E5%90%88%E6%82%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E5%8C%85%E3%80%82">http://nodejs.cn/download/，选择适合您操作系统的安装程序包。</a></li>
+<li>用来将md生成博客html文件</li>
+<li>安装hexo  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li>新建一个空目录，在目录的cmd下，执行下面命令初始化目录，这时你会看到自动生成目录结构  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></li>
+<li>安装一个hexo generator cname，用来部署的时候自动在根目录下生成cname  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i --save hexo-generator-cname</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>新建一个空目录，在目录的cmd下，执行下面命令初始化目录，这时你会看到自动生成目录结构</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装一个hexo generator cname，用来部署的时候自动在根目录下生成cname</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i --save hexo-generator-cname</span><br></pre></td></tr></table></figure>
-
 <h3 id="hexo-melody安装及配置"><a href="#hexo-melody安装及配置" class="headerlink" title="hexo-melody安装及配置"></a>hexo-melody安装及配置</h3><ul>
 <li>一个hexo的主题库，美化你的博客网站</li>
 </ul>
