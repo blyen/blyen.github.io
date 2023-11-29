@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://blyen.blog.me/sitemap.xml
+Sitemap: https://blog.blyen.me/sitemap.xml
