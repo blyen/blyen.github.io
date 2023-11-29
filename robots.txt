@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blyen.github.io/sitemap.xml
