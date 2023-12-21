@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="节点搭建"><meta name="keywords" content="docker,VPS"><meta name="author" content="jim so"><meta name="copyright" content="jim so"><title>节点搭建 | blyen's blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><autocanonical config page></autocanonical><link rel="dns-prefetch" href="https://jsd.cdn.zzko.cn"><link rel="stylesheet" type="text/css" href="https://jsd.cdn.zzko.cn/npm/gitalk/dist/gitalk.min.css"><script src="https://jsd.cdn.zzko.cn/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?52d0a1e84215871fe309d5c2c618fc8c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><meta name="google-site-verification" content="p0ciTe7oyOWPhDD3afrT5H8LcCEUbSPXu5ePyQ4GkPI"><meta name="msvalidate.01" content="317EA13C62FF6EA3179B591A916BA6CF"><meta name="baidu-site-verification" content="codeva-PpbnPv817e"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '7.0.0'
+} </script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/rss2.xml" title="blyen's blog" type="application/rss+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-%E5%AE%89%E8%A3%85x-ui"><span class="toc-number">2.</span> <span class="toc-text">docker 安装x-ui</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x-ui%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">x-ui设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%A4%B1%E8%B4%A5-%E6%97%A5%E5%BF%97%E6%98%BE%E7%A4%BA%EF%BC%9Aio-read-write-on-closed-pipe"><span class="toc-number">4.</span> <span class="toc-text">测试失败 日志显示：io read&#x2F;write on closed pipe</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://blog.blyen.me/static/img/head.jpg"></div><div class="author-info__name text-center">jim so</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">9</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">9</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">2</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">友链</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://shop.blyen.me">小店</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://blog.blyen.me/static/img/bg.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">blyen's blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/categories">分类</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">节点搭建</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-12-18</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">607</span><span class="post-meta__separator">|</span><span>阅读时长: 2 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>一台国外服务器，花几十块入手了rn的vps，一年才$10.18，太划算了，下面是各个配置，性价比很高<table>
+<thead>
+<tr>
+<th>内存</th>
+<th>CPU</th>
+<th>硬盘(SSD)</th>
+<th>带宽</th>
+<th>流量</th>
+<th>价格</th>
+<th>购买链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>768M</td>
+<td>1核</td>
+<td>15G</td>
+<td>1Gbps</td>
+<td>1T&#x2F;月</td>
+<td>$10.18&#x2F;年</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://my.racknerd.com/aff.php?aff=10325&pid=792">点击购买</a></td>
+</tr>
+<tr>
+<td>2G</td>
+<td>1核</td>
+<td>30G</td>
+<td>1Gbps</td>
+<td>2.5T&#x2F;月</td>
+<td>$16.98&#x2F;年</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://my.racknerd.com/aff.php?aff=10325&pid=793">点击购买</a></td>
+</tr>
+<tr>
+<td>2.5G</td>
+<td>2核</td>
+<td>50G</td>
+<td>1Gbps</td>
+<td>5T&#x2F;月</td>
+<td>$25.49&#x2F;年</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://my.racknerd.com/aff.php?aff=10325&pid=794">点击购买</a></td>
+</tr>
+<tr>
+<td>4G</td>
+<td>2核</td>
+<td>80G</td>
+<td>1Gbps</td>
+<td>8T&#x2F;月</td>
+<td>$38.88&#x2F;年</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://my.racknerd.com/aff.php?aff=10325&pid=795">点击购买</a></td>
+</tr>
+<tr>
+<td>4.5G</td>
+<td>4核</td>
+<td>115G</td>
+<td>1Gbps</td>
+<td>10T&#x2F;月</td>
+<td>$52.49&#x2F;年</td>
+<td><a target="_blank" rel="external nofollow noopener noreferrer" href="https://my.racknerd.com/aff.php?aff=10325&pid=796">点击购买</a></td>
+</tr>
+</tbody></table>
+ 我买的是16.98的，洛杉矶服务器，搭节点自己用够了。服务器测速，速度还是很不错的 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Lso- bench.sh | bash</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="/../../static/img/test.png"></p>
+<h2 id="docker-安装x-ui"><a href="#docker-安装x-ui" class="headerlink" title="docker 安装x-ui"></a>docker 安装x-ui</h2><ul>
+<li>先安装docker<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | sh</span><br></pre></td></tr></table></figure></li>
+<li>安装docker-compose<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/latest/download/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+<li>启动x-ui的docker镜像<br>新建文件docker-compose.yml<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">x-ui:</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">enwaiax/x-ui</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">x-ui</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">8051</span><span class="string">:54321</span> <span class="comment"># 管理面板端口映射</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">8100</span><span class="number">-8105</span><span class="string">:8100-8105/tcp</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">8100</span><span class="number">-8105</span><span class="string">:8100-8105/udp</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">443</span><span class="string">:443/tcp</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">443</span><span class="string">:443/udp</span></span><br><span class="line">        <span class="attr">tmpfs:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">/tmp</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">/run</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">/run/lock</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="attr">TZ:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br><span class="line">        <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">/sys/fs/cgroup:/sys/fs/cgroup:ro</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">./x-ui/x-ui-data/:/etc/x-ui</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">./x-ui/ssl/:/root/cert/</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>
+启动镜像<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+开启防火墙的端口，云服务器的安全规则也需要开启如有<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-port=8051/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=8100-8105/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=8100-8105/udp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+查看到8051的端口号是否打开<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="x-ui设置"><a href="#x-ui设置" class="headerlink" title="x-ui设置"></a>x-ui设置</h2><ul>
+<li>登录系统<br>访问http:&#x2F;&#x2F;服务器IP:8051使用账号admin密码admin登录.<br>登录进去记得修改用户名密码。</li>
+<li>添加节点</li>
+<li>客户端下装安装v2rayN<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip">https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip</a></li>
+</ul>
+<h2 id="测试失败-日志显示：io-read-write-on-closed-pipe"><a href="#测试失败-日志显示：io-read-write-on-closed-pipe" class="headerlink" title="测试失败 日志显示：io read&#x2F;write on closed pipe"></a>测试失败 日志显示：io read&#x2F;write on closed pipe</h2><p>原因是服务端的时间与客户端的不一致<br>让服务器自动同步网络时间<br>首先安装 ntpdate 命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y ntpdate</span><br></pre></td></tr></table></figure>
+<p>接着执行如下命令开始同步：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ntpdate 0.asia.pool.ntp.org</span><br></pre></td></tr></table></figure>
+<p>若上面的时间服务器不可用，也可以改用如下服务器进行同步：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">time.nist.gov</span><br><span class="line">time.nuri.net</span><br><span class="line">0.asia.pool.ntp.org</span><br><span class="line">1.asia.pool.ntp.org</span><br><span class="line">2.asia.pool.ntp.org</span><br><span class="line">3.asia.pool.ntp.org</span><br></pre></td></tr></table></figure>
+<p>最后执行如下命令将系统时间同步到硬件，防止系统重启后时间被还原。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hwclock --systohc</span><br></pre></td></tr></table></figure>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noopener noreferrer" target="_blank">jim so</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.blyen.me/2023/12/18/tech/jie-dian-da-jian/">https://blog.blyen.me/2023/12/18/tech/jie-dian-da-jian/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.blyen.me">blyen's blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/docker/">docker</a><a class="post-meta__tags" href="/tags/VPS/">VPS</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://blog.blyen.me/static/img/wechat.jpg"><div class="post-qr-code__desc">微信打赏</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://blog.blyen.me/static/img/alipay.jpg"><div class="post-qr-code__desc">支付宝打赏</div></div></div><div class="social-share pull-right" data-disabled="google,facebook"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="next-post pull-right"><a href="/2023/12/01/live/ren-sheng-de-ji-hui/"><span>人生的机会</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '6163f970ade504e832c4',
+  clientSecret: '2832a2af5573d43354be983ef442c48f5e4e6063',
+  repo: 'blog-comments',
+  owner: 'blyen',
+  admin: 'blyen',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer class="footer-bg" style="background-image: url(https://blog.blyen.me/static/img/bg.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2023 By jim so</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://jsd.cdn.zzko.cn/npm/animejs@latest/lib/anime.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script src="/js/search/local-search.js"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zindex="-1" data-click="false"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
