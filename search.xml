@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>v2rayN使用教程</title>
+      <link href="/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/"/>
+      <url>/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="下载v2rayN"><a href="#下载v2rayN" class="headerlink" title="下载v2rayN"></a>下载v2rayN</h2><p>从下面链接下载开源软件v2rayN,并解压缩<br><a href="https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip">https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip</a></p><h2 id="使用v2rayN"><a href="#使用v2rayN" class="headerlink" title="使用v2rayN"></a>使用v2rayN</h2><ul><li>复制从shop.blyen.me购买的链接</li><li>打开运行v2rayN</li><li>在菜单项选择”服务器”-&gt;从剪切板导入url<br><img src="/../../static/img/vps/4.png"></li><li>右键点击右下角V小图标,如图，选择自动配置代理，绕过大陆和选择我们导入的服务器，就可以自由上网了<br><img src="/../../static/img/vps/5.png"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> v2ray </tag>
+            
+            <tag> VPS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>v2ray+docker+nginx+cloudflare搭建vps节点</title>
       <link href="/2023/12/18/tech/jie-dian-da-jian/"/>
       <url>/2023/12/18/tech/jie-dian-da-jian/</url>

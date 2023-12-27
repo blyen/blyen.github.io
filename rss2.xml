@@ -9,8 +9,36 @@
     <atom:link href="https://blog.blyen.me/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 25 Dec 2023 05:12:37 GMT</pubDate>
+    <pubDate>Wed, 27 Dec 2023 09:21:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>v2rayN使用教程</title>
+      <link>https://blog.blyen.me/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/</link>
+      <guid>https://blog.blyen.me/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/</guid>
+      <pubDate>Wed, 27 Dec 2023 09:08:31 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;下载v2rayN&quot;&gt;&lt;a href=&quot;#下载v2rayN&quot; class=&quot;headerlink&quot; title=&quot;下载v2rayN&quot;&gt;&lt;/a&gt;下载v2rayN&lt;/h2&gt;&lt;p&gt;从下面链接下载开源软件v2rayN,并解压缩&lt;br&gt;&lt;a href=&quot;https://git</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="下载v2rayN"><a href="#下载v2rayN" class="headerlink" title="下载v2rayN"></a>下载v2rayN</h2><p>从下面链接下载开源软件v2rayN,并解压缩<br><a href="https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip">https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip</a></p><h2 id="使用v2rayN"><a href="#使用v2rayN" class="headerlink" title="使用v2rayN"></a>使用v2rayN</h2><ul><li>复制从shop.blyen.me购买的链接</li><li>打开运行v2rayN</li><li>在菜单项选择”服务器”-&gt;从剪切板导入url<br><img src="/../../static/img/vps/4.png"></li><li>右键点击右下角V小图标,如图，选择自动配置代理，绕过大陆和选择我们导入的服务器，就可以自由上网了<br><img src="/../../static/img/vps/5.png"></li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://blog.blyen.me/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      
+      <category domain="https://blog.blyen.me/tags/v2ray/">v2ray</category>
+      
+      <category domain="https://blog.blyen.me/tags/VPS/">VPS</category>
+      
+      
+      <comments>https://blog.blyen.me/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>v2ray+docker+nginx+cloudflare搭建vps节点</title>
