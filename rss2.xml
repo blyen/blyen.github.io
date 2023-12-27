@@ -9,7 +9,7 @@
     <atom:link href="https://blog.blyen.me/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 27 Dec 2023 09:21:22 GMT</pubDate>
+    <pubDate>Wed, 27 Dec 2023 09:43:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -20,12 +20,13 @@
       
         
         
-      <description>&lt;h2 id=&quot;下载v2rayN&quot;&gt;&lt;a href=&quot;#下载v2rayN&quot; class=&quot;headerlink&quot; title=&quot;下载v2rayN&quot;&gt;&lt;/a&gt;下载v2rayN&lt;/h2&gt;&lt;p&gt;从下面链接下载开源软件v2rayN,并解压缩&lt;br&gt;&lt;a href=&quot;https://git</description>
+      <description>&lt;h2 id=&quot;下载v2rayN&quot;&gt;&lt;a href=&quot;#下载v2rayN&quot; class=&quot;headerlink&quot; title=&quot;下载v2rayN&quot;&gt;&lt;/a&gt;下载v2rayN&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;windows下载&lt;br&gt;从下面链接下载开源软件v2rayN,并解压缩&lt;b</description>
         
       
       
       
-      <content:encoded><![CDATA[<h2 id="下载v2rayN"><a href="#下载v2rayN" class="headerlink" title="下载v2rayN"></a>下载v2rayN</h2><p>从下面链接下载开源软件v2rayN,并解压缩<br><a href="https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip">https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip</a></p><h2 id="使用v2rayN"><a href="#使用v2rayN" class="headerlink" title="使用v2rayN"></a>使用v2rayN</h2><ul><li>复制从shop.blyen.me购买的链接</li><li>打开运行v2rayN</li><li>在菜单项选择”服务器”-&gt;从剪切板导入url<br><img src="/../../static/img/vps/4.png"></li><li>右键点击右下角V小图标,如图，选择自动配置代理，绕过大陆和选择我们导入的服务器，就可以自由上网了<br><img src="/../../static/img/vps/5.png"></li></ul>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="下载v2rayN"><a href="#下载v2rayN" class="headerlink" title="下载v2rayN"></a>下载v2rayN</h2><ul><li><p>windows下载<br>从下面链接下载开源软件v2rayN,并解压缩<br><a href="https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip">https://github.com/2dust/v2rayN/releases/download/6.31/v2rayN-With-Core.zip</a></p></li><li><p>android下载<br>请大家根据自己的CPU架构下载对应版本：<br><a href="https://github.com/Pawdroid/shadowrocket_for_android/releases/download/10.6.0/app-shadowrocket-arm64-v8a-release.apk">arm64-v8a</a>（推荐，运行会更快，但要手机支持64位，大部分主流手机都支持）<br><a href="https://github.com/Pawdroid/shadowrocket_for_android/releases/download/10.6.0/app-shadowrocket-armeabi-v7a-release.apk">armeabi-v7a</a>（一些老旧手机）</p></li></ul><h2 id="使用v2rayN"><a href="#使用v2rayN" class="headerlink" title="使用v2rayN"></a>使用v2rayN</h2><ul><li>复制从shop.blyen.me购买的链接</li><li>打开运行v2rayN</li><li>在菜单项选择”服务器”-&gt;从剪切板导入url<br><img src="/../../static/img/vps/4.png"></li><li>右键点击右下角V小图标,如图，选择自动配置代理，绕过大陆和选择我们导入的服务器，就可以自由上网了<br><img src="/../../static/img/vps/5.png"></li></ul>]]></content:encoded>
       
       
       <category domain="https://blog.blyen.me/categories/%E6%8A%80%E6%9C%AF/">技术</category>
