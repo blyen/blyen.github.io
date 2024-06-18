@@ -44,10 +44,10 @@ docker-compose --version
 echo "Docker 和 Docker Compose 安装完成"
 
 # 下载并启动x-ui docker-compose.yml
-sudo curl -L https://raw.githubusercontent.com/blyen/blog/master/scripts/docker-compose.yml?token=GHSAT0AAAAAACTFZEASLOZIZSR56N5XUWMMZTQBZ4A -o ~/docker-compose.yml
+sudo curl -L https://raw.githubusercontent.com/blyen/blyen.github.io/main/scripts/docker-compose.txt -o ~/docker-compose.yml
 sudo chmod +x ~/docker-compose.yml
 docker-compose up -d
 
 # 同步亚洲时间
-sudo apt install -y ntp
+sudo apt install -y ntpdate
 ntpdate 0.asia.pool.ntp.org
