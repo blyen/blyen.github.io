@@ -43,6 +43,10 @@ docker-compose --version
 
 echo "Docker 和 Docker Compose 安装完成"
 
+# 配置nginx
+mkdir ~/nginx
+sudo curl -L https://raw.githubusercontent.com/blyen/blyen.github.io/main/scripts/nginx.conf -o ~/nginx/nginx.conf
+
 # 下载并启动x-ui docker-compose.yml
 sudo curl -L https://raw.githubusercontent.com/blyen/blyen.github.io/main/scripts/docker-compose.txt -o ~/docker-compose.yml
 sudo chmod +x ~/docker-compose.yml

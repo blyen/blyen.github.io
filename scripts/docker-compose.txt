@@ -28,8 +28,11 @@ services:
         environment:
             - TZ=Asia/Shanghai
         volumes:
-            - ./nginx/config:/etc/nginx
+            - ./nginx/html:/etc/nginx/html
             - ./nginx/log:/var/log/nginx
+            - ./nginx/vhost:/etc/nginx/vhost
+            - ./nginx/ssl:/etc/nginx/ssl
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro #映射的时候要先docker cp拷出来
         ports:
             - 80:80
             - 443:443
