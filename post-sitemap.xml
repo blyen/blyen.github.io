@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://blog.blyen.me/2024/06/21/node/farcast-jie-dian-da-jian/</loc>
+        <lastmod>2024-06-21T07:17:37.474Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://blog.blyen.me/2023/11/21/tech/ji-lu-ge-ren-bo-ke-wang-zhan-de-da-jian-guo-cheng/</loc>
+        <lastmod>2024-06-21T06:53:11.642Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://blog.blyen.me/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/</loc>
         <lastmod>2023-12-27T09:48:27.828Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -75,14 +91,6 @@
     <url>
         <loc>https://blog.blyen.me/2023/11/22/tech/python-zhong-de-i-j-k/</loc>
         <lastmod>2023-11-22T06:39:45.537Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://blog.blyen.me/2023/11/21/tech/ji-lu-ge-ren-bo-ke-wang-zhan-de-da-jian-guo-cheng/</loc>
-        <lastmod>2023-11-22T06:07:06.916Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -1,3 +1,5 @@
+https://blog.blyen.me/2024/06/21/node/farcast-jie-dian-da-jian/
+https://blog.blyen.me/2023/11/21/tech/ji-lu-ge-ren-bo-ke-wang-zhan-de-da-jian-guo-cheng/
 https://blog.blyen.me/2023/12/27/tech/v2rayn-shi-yong-jiao-cheng/
 https://blog.blyen.me/2023/12/18/tech/jie-dian-da-jian/
 https://blog.blyen.me/2023/11/27/live/xue-xi-fang-fa/
@@ -6,5 +8,3 @@ https://blog.blyen.me/2023/11/22/live/mei-yue-zhuan-qu-4.5w-mei-yuan-de-du-li-ka
 https://blog.blyen.me/2023/11/22/live/zu-qiu-xun-lian-de-ji-ben-yao-su/
 https://blog.blyen.me/2023/11/22/tech/linux-gua-zai-yuan-cheng-mu-lu/
 https://blog.blyen.me/2023/11/22/tech/docker-qiang-zhi-shan-chu-rong-qi/
-https://blog.blyen.me/2023/11/22/tech/python-zhong-de-i-j-k/
-https://blog.blyen.me/2023/11/21/tech/ji-lu-ge-ren-bo-ke-wang-zhan-de-da-jian-guo-cheng/
