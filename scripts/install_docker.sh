@@ -54,4 +54,4 @@ docker-compose up -d
 
 # 同步亚洲时间
 sudo apt install -y ntpdate
-ntpdate 0.asia.pool.ntp.org
+ntpdate ntp.aliyun.com
